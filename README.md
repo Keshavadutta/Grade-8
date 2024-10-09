@@ -63,7 +63,7 @@ Replace the placeholders `"your_username"`, `"your_aio_key"`, `"your_wifi_ssid"`
 Example:
 
 ```cpp
-#define IO_USERNAME  "your_username"      // Replace with your Adafruit IO username
-#define IO_KEY       "your_aio_key"       // Replace with your Adafruit IO key
-#define WIFI_SSID    "your_wifi_ssid"     // Replace with your Wi-Fi SSID
-#define WIFI_PASS    "your_wifi_password" // Replace with your Wi-Fi password
+#define IO_USERNAME  "Sujaykumar"      // Replace with your Adafruit IO username
+#define IO_KEY       "aio_TdoX96ijmCNO03WYWj5nmU5zQgzG"       // Replace with your Adafruit IO key
+#define WIFI_SSID    "Sujaykmr"     // Replace with your Wi-Fi SSID
+#define WIFI_PASS    "P@ssw0rd" // Replace with your Wi-Fi password
