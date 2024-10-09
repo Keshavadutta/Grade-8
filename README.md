@@ -1,12 +1,12 @@
-# Grade 8 Projects
+# Grade 8 Code Repository
 
-## Activities Overview
+Welcome to the Grade 8 Code Repository! This repository contains various IoT and electronics activities related to ESP32, Arduino, and other components, along with the necessary library files in the **Library Zip Files** folder.
 
-In this repository, you'll find several IoT-based projects for Grade 6 students. Each project involves using ESP32 and other hardware components to control devices, collect data, and send the data to **Adafruit IO**, a cloud platform.
+## Activities
 
-### Activities:
+The following activities are included:
 
-- **ESP_Servo**: Control servo motors using ESP32.
+- **ESP_Servo**: Control a servo motor using the ESP32.
 - **LED**: Simple LED control.
 - **LED_IoT**: Control LEDs remotely over the internet using Adafruit IO.
 - **Moisture Based Watering**: Automate watering based on soil moisture readings.
@@ -20,9 +20,28 @@ In this repository, you'll find several IoT-based projects for Grade 6 students.
 - **Ultrasonic**: Measure distance using an ultrasonic sensor and send the data to Adafruit IO.
 - **Ultrasonic_IoT**: Control or monitor distance measurement using an ultrasonic sensor via Adafruit IO.
 
+Each activity focuses on a different concept related to IoT, automation, and sensor-based projects.
+
+## Library Zip Files
+
+All the libraries required for these activities are available in the **Library Zip Files** folder. Make sure to install the appropriate libraries before running the code.
+
+## How to Install Libraries in Arduino IDE
+
+1. Download the necessary `.zip` library files from the **Library Zip Files** folder.
+2. Open the Arduino IDE.
+3. Go to **Sketch > Include Library > Add .ZIP Library...**
+4. Navigate to the location where you downloaded the `.zip` file, select it, and click **Open**.
+5. The library will now be installed and available for use in your Arduino projects.
+
+### Required Libraries:
+- **Adafruit IO Library**: For communication with Adafruit IO.
+- **ESP32 Servo Library**: For controlling servo motors.
+- **WiFi Library**: For ESP32 Wi-Fi connection.
+
 ---
 
-## Setup Instructions
+## How to Use
 
 ### 1. **Adafruit IO Setup**:
 
@@ -37,7 +56,7 @@ For all IoT projects, you need an **Adafruit IO** account to interact with the c
 Replace the placeholders `"your_username"`, `"your_aio_key"`, `"your_wifi_ssid"`, and `"your_wifi_password"` in the project code files with your actual Adafruit IO and WiFi credentials.
 
 - **IO Username**: The username you created on Adafruit IO.
-- **IO Key**: This is your Adafruit IO key that can be found in your Adafruit IO dashboard under **My Profile**.
+- **IO Key**: This is your Adafruit IO key, which can be found in your Adafruit IO dashboard under **My Profile**.
 - **Wi-Fi SSID**: Your Wi-Fi network name.
 - **Wi-Fi Password**: Your Wi-Fi password.
 
