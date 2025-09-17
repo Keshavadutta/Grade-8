@@ -14,7 +14,7 @@
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);  // Adafruit IO Wi-Fi setup
 
 // Create a feed to send soil moisture data to Adafruit IO
-AdafruitIO_Feed *moisture_feed = io.feed("moisture");
+AdafruitIO_Feed *soil_moisture = io.feed("soil_moisture");
 
 void setup() {
   // Start serial communication for debugging
@@ -60,8 +60,9 @@ void loop() {
   Serial.println(moisture);
 
   // Send the moisture value to Adafruit IO feed
-  moisture_feed->save(moisture);
+  soil_moisture->save(moisture);
 
   // Wait for 5 seconds before the next reading
   delay(5000);
 }
+
