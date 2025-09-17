@@ -16,7 +16,7 @@
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 
 // Set up the Adafruit IO feed for LED control
-AdafruitIO_Feed *led_feed = io.feed("led");
+AdafruitIO_Feed *led_feed = io.feed("led_feed");
 
 void setup() {
   // Start the serial connection
@@ -61,3 +61,4 @@ void handleMessage(AdafruitIO_Data *data) {
     digitalWrite(LED_PIN, LOW);   // Turn LED off
   }
 }
+
