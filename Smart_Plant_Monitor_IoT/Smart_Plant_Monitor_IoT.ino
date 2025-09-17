@@ -16,8 +16,8 @@
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 
 // Create feeds for soil moisture and relay status
-AdafruitIO_Feed *moisture_feed = io.feed("moisture");
-AdafruitIO_Feed *relay_feed = io.feed("relay");
+AdafruitIO_Feed *soil_moisture = io.feed("soil_moisture");
+AdafruitIO_Feed *Relay_Control = io.feed("Relay_Control");
 
 int output_value;            // To store the raw analog value from the sensor
 int moisturelevel;           // To store the mapped moisture level in percentage
@@ -62,16 +62,16 @@ void loop() {
   Serial.println("%");
 
   // Send the moisture level to Adafruit IO
-  moisture_feed->save(moisturelevel);
+  soil_moisture->save(moisturelevel);
 
   // Check if moisture level is below 25%
   if (moisturelevel < 25) {
     digitalWrite(relay, HIGH);  // Turn the motor ON
-    relay_feed->save(1);        // Send relay status (1 = ON) to Adafruit IO
+    Relay_Control->save(1);        // Send relay status (1 = ON) to Adafruit IO
   } 
   else {
     digitalWrite(relay, LOW);   // Turn the motor OFF
-    relay_feed->save(0);        // Send relay status (0 = OFF) to Adafruit IO
+    Relay_Control->save(0);        // Send relay status (0 = OFF) to Adafruit IO
   }
 
   // Send relay status to Adafruit IO
@@ -81,3 +81,4 @@ void loop() {
   // Wait for 1 second before the next reading
   delay(1000);
 }
+
