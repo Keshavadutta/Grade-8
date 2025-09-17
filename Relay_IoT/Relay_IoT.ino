@@ -16,7 +16,7 @@
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 
 // Set up the Adafruit IO feed for relay control
-AdafruitIO_Feed *relay_feed = io.feed("relay");
+AdafruitIO_Feed *Relay_Control = io.feed("Relay_Control");
 
 void setup() {
   // Start the serial connection
@@ -30,7 +30,7 @@ void setup() {
   io.connect();
 
   // Set up a message handler for when feed data is received
-  relay_feed->onMessage(handleMessage);
+  Relay_Control->onMessage(handleMessage);
 
   // Wait for a connection to Adafruit IO
   while(io.status() < AIO_CONNECTED) {
@@ -63,3 +63,4 @@ void handleMessage(AdafruitIO_Data *data) {
     Serial.println("Relay turned OFF");
   }
 }
+
